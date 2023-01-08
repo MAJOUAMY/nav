@@ -1,1 +1,1 @@
-this is a simple nonresponsive navgation bar ,
+this is a simple responsive navgation bar ,
