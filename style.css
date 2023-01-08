@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+a{
+    text-decoration: none;
+
+}
+header{
+    width:100%;
+    height: 70px;
+    background-color: white;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: relative;
+}
+header > a{
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 20px;
+}
+.nav{
+    display: flex;
+    column-gap: 10px;
+
+}
+.nav li{
+    padding: 10px 10px;
+    border-radius: 5px;
+   transition: .3s ease;
+}
+.nav li:hover{
+    background-color: darkgreen;
+    color: white;
+}
+.nav li a{
+    color: inherit;
+    padding: inherit;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+.menu-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 5px;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    z-index:200;
+    transition: 0.3s all;
+    cursor: pointer;
+    display: none;
+}
+.menu-icon span{
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: darkgreen;
+}
+.active .line1 {
+    transform: rotate(-45deg) translate(-5px,5px);
+}
+.active .line2 {
+    opacity: 0;
+}
+.active .line3 {
+    transform: rotate(45deg) translate(-5px,-5px);
+}
+
+
+
+/* let make the navbar responsive */
+@media (max-width:900px){
+    .nav{
+        row-gap: 0px;
+    }
+    
+}
+@media (max-width:780px){
+    .nav{
+        position: absolute;
+        top: 110%;
+        right: 50px;
+        width: 200px;
+        display: flex;
+        flex-direction:column;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+        display: none;
+    }
+    .nav.show{
+        position: absolute;
+        top: 110%;
+        right: 50px;
+        width: 200px;
+        display: flex;
+        flex-direction:column;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    }
+    .menu-icon{
+        display: flex;
+    }
+   
+}
+
+@media (max-width:400px){
+    header{
+        padding: 0 20px;
+    }
+    .nav{
+        position: absolute;
+        top: 110%;
+        right: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+        display: none;
+    }
+    .nav.show{
+        position: absolute;
+        top: 110%;
+        right: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    }
+    .menu-icon{
+        display: flex;
+    }
+   
+}
